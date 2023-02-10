@@ -1,0 +1,30 @@
+{
+    "name": "startgg_vibrate",
+    "version": "0.0.1",
+    "description": "Simple App to tell players when their matches are available",
+    "main": "server.js",
+    "scripts": {
+      "run": "node server.js",
+      "test": "exit 0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jeffsinsel/startgg_vibrate"
+    },
+    "keywords": [
+      "git",
+      "github",
+      "circleci",
+      "startgg",
+      "graphql"
+    ],
+    "author": "Jeff Sinsel <jeffsinsel@gmail.com>",
+    "license": "none",
+    "bugs": {
+      "url": "https://github.com/jeffsinsel/startgg_vibrate/issues"
+    },
+    "homepage": "https://github.com/jeffsinsel/startgg_vibrate#readme",
+    "dependencies": {
+      "express": "^4.18.2"
+    }
+  }
