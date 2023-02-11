@@ -51,4 +51,13 @@ query ($slug: String) {
   }
 }`;
 
+const getPlayerId = gql`
+query ($slug: String) {
+  user(slug: $slug) {
+    player {
+      id
+    }
+  }
+}`
+
 module.exports = {getPlayerListByEvent,getEventListByTournament,sendQuery};
