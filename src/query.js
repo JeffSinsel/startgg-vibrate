@@ -1,9 +1,9 @@
-const { request, gql,GraphQLClient } = require('graphql-request');
+const { gql,GraphQLClient } = require('graphql-request');
 
 async function sendQuery(query,variables) {
   const graphQLClient = new GraphQLClient('https://api.start.gg/gql/alpha', {
     headers: {
-        authorization: 'Bearer ' + "cf8a22705b8239ddae40fe7942679acb",
+        authorization: 'Bearer cf8a22705b8239ddae40fe7942679acb',
     },
     });
 
@@ -60,4 +60,4 @@ query ($slug: String) {
   }
 }`
 
-module.exports = {getPlayerListByEvent,getEventListByTournament,sendQuery};
+module.exports = {getPlayerListByEvent,getEventListByTournament,sendQuery,getPlayerId};

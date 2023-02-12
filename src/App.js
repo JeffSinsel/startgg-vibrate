@@ -1,31 +1,22 @@
 import './App.css';
-import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Slug from './pages/slug.js';
 import Home from './pages/home.js';
+import Sets from './pages/sets.js';
+import React, { useState } from 'react';
 
 function App() {
-
-  const [message, setMessage] = useState('');
-
-  const handleChange = event => {
-    setMessage(event.target.value);
-
-    console.log('value is:', event.target.value);
+  const [inputValue, setInputValue] = useState('');
+ 
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
   };
-
-  const handleClick = event => {
-    event.preventDefault();
-
-    // 👇️ value of input field
-    console.log('handleClick 👉️', message);
-  };
-
   return (
     <BrowserRouter>
     <Routes>
-        <Route exact path='/' element={<Home />} />
+        <Route exact path='/' element={<Home inputValue={inputValue} handleChange={handleChange}/>} />
         <Route path='/slug' element={<Slug/>} />
+        <Route path='/sets' element={<Sets inputValue={inputValue} />} />
     </Routes>
     </BrowserRouter>
   );
