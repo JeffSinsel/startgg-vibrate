@@ -60,4 +60,28 @@ query ($slug: String) {
   }
 }`
 
-module.exports = {getPlayerListByEvent,getEventListByTournament,sendQuery,getPlayerId};
+const getSetsByPlayerId = gql`
+query ($playerId: ID!,$timestamp: Timestamp) {
+  player(id: $playerId) {
+    sets(page:1,perPage:100,filters:{updatedAfter:$timestamp}) {
+      nodes {
+        event {
+          name
+          tournament {
+            name
+            startAt
+          }
+        }
+        round
+        state
+        id
+        startAt
+        station {
+          number
+        }
+      }
+    }
+  }
+}`
+
+module.exports = {getPlayerListByEvent,getEventListByTournament,sendQuery,getPlayerId,getSetsByPlayerId};
