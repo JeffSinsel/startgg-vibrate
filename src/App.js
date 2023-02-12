@@ -14,9 +14,9 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-        <Route exact path='/' element={<Home inputValue={inputValue} handleChange={handleChange}/>} />
+        <Route exact path='/' element={<Home/>} />
         <Route path='/slug' element={<Slug/>} />
-        <Route path='/sets' element={<Sets inputValue={inputValue} />} />
+        <Route path='/sets' element={<Sets/>} />
     </Routes>
     </BrowserRouter>
   );

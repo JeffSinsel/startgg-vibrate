@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
-import logo from './logo.svg';
-import {sendQuery,getPlayerId} from '../query.js'
+import logo from '../logo.svg';
+import { sendQuery,getPlayerId } from '../query.js'
 
 const Home= () => {
     const [input, setInput] = useState('');

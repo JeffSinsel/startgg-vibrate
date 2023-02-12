@@ -84,4 +84,4 @@ query ($playerId: ID!,$timestamp: Timestamp) {
   }
 }`
 
-module.exports = {getPlayerListByEvent,getEventListByTournament,sendQuery,getPlayerId,getSetsByPlayerId};
+export { getPlayerListByEvent,getEventListByTournament,sendQuery,getPlayerId,getSetsByPlayerId };

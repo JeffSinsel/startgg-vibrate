@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import './pages.css';
 import { useLocation } from 'react-router';
-import { sendQuery,getSetsByPlayerId } from '../query';
-import logo from './logo.svg';
+import { sendQuery,getSetsByPlayerId } from '../query.js';
+import logo from '../logo.svg';
 
 const Sets = () => {
   const [sets, setSets] = useState('');
@@ -52,7 +52,7 @@ const Sets = () => {
       sets[i].startAt !== 0 ? time = sets[i].startAt*1000 : time = sets[i].event.tournament.startAt*1000
       sets[i].startAt !== 0 ? noun = "match": noun = "tournament"
       sets[i].station ? station ='. Your station number is ' + sets[i].station.number : station = 'Station blurb'
-      new Date(Date.now()).toLocaleTimeString("en-US",{timeStyle:"short",timeZone:'America/New_York'}) === new Date(time).toLocaleTimeString("en-US",{timeStyle:"short",timeZone:'America/New_York'}) ? console.log("VIBRATE") : console.log("who")
+      new Date(Date.now()).toLocaleTimeString("en-US",{timeStyle:"short",timeZone:'America/New_York'}) === new Date(time).toLocaleTimeString("en-US",{timeStyle:"short",timeZone:'America/New_York'}) ? navigator.vibrate(200) : console.log("who")
       setArray.push({"id":(sets[i].id),"eventName":(sets[i].event.name),"tournament":sets[i].event.tournament.name,"round":(sets[i].round > 0 ? "Winners Round " + sets[i].round : "Losers Round " + Math.abs(sets[i].round)),"startTime":(
       // if today
       Date.now() >= new Date(time).getTime()-60000? 
