@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/startgg-vibrate/static/css/main.09dc1357.css",
-    "main.js": "/startgg-vibrate/static/js/main.1e4f29b9.js",
+    "main.css": "/startgg-vibrate/static/css/main.5f1bf792.css",
+    "main.js": "/startgg-vibrate/static/js/main.3c66e2e8.js",
     "static/js/787.3f202bed.chunk.js": "/startgg-vibrate/static/js/787.3f202bed.chunk.js",
     "static/media/logo.svg": "/startgg-vibrate/static/media/logo.6e390bfd92575306348249643d7078c6.svg",
     "index.html": "/startgg-vibrate/index.html",
-    "main.09dc1357.css.map": "/startgg-vibrate/static/css/main.09dc1357.css.map",
-    "main.1e4f29b9.js.map": "/startgg-vibrate/static/js/main.1e4f29b9.js.map",
+    "main.5f1bf792.css.map": "/startgg-vibrate/static/css/main.5f1bf792.css.map",
+    "main.3c66e2e8.js.map": "/startgg-vibrate/static/js/main.3c66e2e8.js.map",
     "787.3f202bed.chunk.js.map": "/startgg-vibrate/static/js/787.3f202bed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09dc1357.css",
-    "static/js/main.1e4f29b9.js"
+    "static/css/main.5f1bf792.css",
+    "static/js/main.3c66e2e8.js"
   ]
 }
