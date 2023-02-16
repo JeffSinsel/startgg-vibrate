@@ -61,9 +61,9 @@ query ($slug: String) {
 }`
 
 const getSetsByPlayerId = gql`
-query ($playerId: ID!,$timestamp: Timestamp) {
+query ($playerId: ID!, $timestamp :Timestamp) {
   player(id: $playerId) {
-    sets(page:1,perPage:100,filters:{updatedAfter:$timestamp}) {
+    sets(page:1,perPage:3,filters:{updatedAfter:$timestamp}) {
       nodes {
         event {
           name
@@ -72,7 +72,7 @@ query ($playerId: ID!,$timestamp: Timestamp) {
             startAt
           }
         }
-        round
+        fullRoundText
         state
         id
         startAt

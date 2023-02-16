@@ -3,20 +3,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Slug from './pages/slug.js';
 import Home from './pages/home.js';
 import Sets from './pages/sets.js';
-import React, { useState } from 'react';
+import React from 'react';
 
 function App() {
-  const [inputValue, setInputValue] = useState('');
- 
-  const handleChange = (event) => {
-    setInputValue(event.target.value);
-  };
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='startgg-vibrate'>
     <Routes>
-        <Route exact path='/' element={<Home/>} />
-        <Route path='/slug' element={<Slug/>} />
-        <Route path='/sets' element={<Sets/>} />
+        <Route exact path='/' element={<Home/>} key="Home" />
+        <Route path='/slug' element={<Slug/>} key="Slug" />
+        <Route path='/sets' element={<Sets/>} key="Sets" />
     </Routes>
     </BrowserRouter>
   );

@@ -39,7 +39,6 @@ const Home= () => {
     };
   
     const handleClick = event => {
-      navigator.vibrate(200);
       event.preventDefault();
       if (input.length === 8 && re.test(input)) {
         fetchData(getPlayerId,{'slug':input})

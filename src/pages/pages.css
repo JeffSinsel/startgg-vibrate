@@ -31,8 +31,8 @@ body {
   }
 
   ul {
-    list-style-position: inside;
-    padding-left: 20px;
+    list-style-position: outside;
+    padding-left: 0px;
   }
 
   h1,h2,h3,h4,h5,h6 {
