@@ -61,8 +61,9 @@ const Sets = () => {
     setDataArray = setArray.map((data) => <div key={data.id}><ul key={"name_"+data.id}>{data.eventName} at {data.tournament}, {data.round}:</ul><ul key={"state_"+data.id}><b>Your match{data.state}</b></ul><br /></div>);
   }
 
-  if (state === "success" && j === 4) {
-    notifArray = JSON.parse(localStorage.getItem("name"));
+  if (state === "success" && j % 2 === 0) {
+    if (sessionStorage.key(0) !== "name") {sessionStorage.setItem('name',JSON.stringify([]))}
+    notifArray = JSON.parse(sessionStorage.getItem("name"));
     for (let i = 0; i<sets.length; i++) {
       if (sets[i].state === 6 && !notifArray.includes(sets[i].id)){
         addNotification({
@@ -79,7 +80,7 @@ const Sets = () => {
             notifArray.splice(index, 1);
           }
     }} 
-    localStorage.setItem("name",JSON.stringify(notifArray));
+    sessionStorage.setItem("name",JSON.stringify(notifArray));
   }
 
   return (
